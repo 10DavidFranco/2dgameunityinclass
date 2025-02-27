@@ -1,9 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class batteries_producer : MonoBehaviour
+public class mybombspawn : MonoBehaviour
 {
+
     public GameObject itemPrefab;
-    public GameObject particles;
     public float r;
 
     // Start is called before the first frame update
@@ -29,10 +31,8 @@ public class batteries_producer : MonoBehaviour
     void spawObject()
     {
 
-        Vector3 randomPos = Random.insideUnitCircle * r;
-        
-        Instantiate(particles, randomPos, Quaternion.identity);
-
+        Vector2 randomPos = Random.insideUnitCircle * r;
         Instantiate(itemPrefab, randomPos, Quaternion.identity);
+
     }
 }
